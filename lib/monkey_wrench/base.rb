@@ -22,12 +22,12 @@ module MonkeyWrench
 
       def get(params)
         response = super(base_uri, :query => params.merge(default_options))
-        handle_errors(response.parsed_response)
+        handle_errors(response)
       end
       
       def post(params)
         response = super(base_uri, :query => params.merge(default_options))
-        handle_errors(response.parsed_response)
+        handle_errors(response)
       end
       
       def handle_errors(objects)
